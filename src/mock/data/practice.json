@@ -1,0 +1,46 @@
+[
+    {
+        "id": 1,
+        "question": "Which one of these is “Role”",
+        "answer": 3,
+        "choice": [
+            "What do you need to do?",
+            "What format should the response be?",
+            "Who are you?",
+            "Any conditions or limitations?"
+        ]
+    },
+    {
+        "id": 2,
+        "question": "Which one of these is “Role”",
+        "answer": 2,
+        "choice": [
+            "I need to analyze the sales data.",
+            "I am a Data Analyst.",
+            "The report should be no longer than 500 words.",
+            "The response should be in a report format."
+        ]
+    },
+    {
+        "id": 3,
+        "question": "Which one of these is “Task”",
+        "answer": 1,
+        "choice": [
+            "What do you need to do?",
+            "What format should the response be?",
+            "Who are you?",
+            "Any conditions or limitations?"
+        ]
+    },
+    {
+        "id": 4,
+        "question": "Which one of these is “Task”",
+        "answer": 3,
+        "choice": [
+            "I am a teacher.",
+            "Explaining quadratic equations to high school students",
+            "Write a paragraph",
+            "Use clear, simple language and solve one example problem."
+        ]
+    }
+]

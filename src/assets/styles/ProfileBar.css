@@ -1,0 +1,179 @@
+.profile-bar {
+    flex: 0.3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    border-left: 1px solid;
+    border-image: linear-gradient(to top, #86E7D6, #538AD6) 1;
+    font-family: "Arial Rounded MT Bold", sans-serif;
+}
+
+.profile-bar img:not(.profile-pic img, .next-button, .title img) {
+    height: 30px;
+    filter: invert(100%);
+}
+
+.profile-bar .next-button {
+    height: 20px;
+    filter: invert(100%);
+    cursor: pointer;
+}
+
+.profile-bar .profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-bar .profile .username {
+    color: rgba(255, 255, 255, .5);
+}
+
+.profile-bar .profile .view-profile-button {
+    width: 120px;
+    height: 35px;
+    background-image: linear-gradient(135deg, #8566FF, #74B6F7);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, .15);
+    cursor: pointer;
+    transition: .25s;
+}
+
+.profile-bar .profile .view-profile-button:hover {
+    transform: scale(1.02);
+}
+
+.profile-bar .profile .view-profile-button:active {
+    transform: scale(0.99);
+}
+
+.profile-bar .daily-quest {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.profile-bar .daily-quest .header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.profile-bar .daily-quest .quest-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    gap: 5px;
+}
+
+.profile-bar .daily-quest .quest-list .quest {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 5px 0;
+}
+
+.profile-bar .daily-quest .quest-list .quest .quest-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile-bar .daily-quest .quest-list .quest .quest-progress {
+    height: 5px;
+    background-color: rgba(0, 0, 0, .3);
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.profile-bar .daily-quest .quest-list .quest .quest-progress .inner-bar {
+    height: 100%;
+    width: 0;
+    background-color: #86E7D6;
+    border-radius: 50px;
+}
+
+.profile-bar .daily-quest .quest-list .quest:first-child .quest-progress .inner-bar {
+    width: 20%;
+}
+
+.profile-bar .daily-quest .time {
+    display: flex;
+    gap: 10px;
+    font-size: 12px;
+}
+
+.profile-bar .daily-quest .time .time-unit {
+    width: 40px;
+    background-color: rgba(0, 0, 0, .25);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 9px 0;
+}
+
+.profile-bar .daily-quest .time .time-unit p:last-child {
+    font-size: 9px;
+    color: rgba(255, 255, 255, .6);
+}
+
+.profile-bar .leaderboard {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-bar .leaderboard .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.profile-bar .leaderboard .user-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 14px;
+}
+
+.profile-bar .leaderboard .user-list .user {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1A84D1;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, .15);
+    padding: 0 10px;
+}
+
+.profile-bar .leaderboard .user-list .user .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-bar .leaderboard .user-list .user .title img {
+    width: 30px;
+    height: 30px;
+}
+
+.profile-bar .leaderboard .user-list .user .score {
+    color: rgba(255, 255, 255, .9);
+}
