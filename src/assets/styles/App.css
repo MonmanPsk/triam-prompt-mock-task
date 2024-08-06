@@ -3,5 +3,20 @@
     height: 100vh;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: stretch;
+    position: relative;
+}
+
+.left-layout {
+    width: 16%;
+    height: 100%;
+    position: relative;
+    min-width: 200px;
+}
+
+.right-layout {
+    width: 19%;
+    height: 100%;
+    position: relative;
+    min-width: 200px;
 }

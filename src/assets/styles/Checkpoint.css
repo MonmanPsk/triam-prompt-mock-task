@@ -1,3 +1,165 @@
 .checkpoint {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    position: relative;
+    clip-path: inset(0);
+}
+
+.checkpoint .linear-fill {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, #080D3F, #B516DD);
+    opacity: 0.35;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.checkpoint .header {
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 8px;
+}
+
+.checkpoint .header .header-line {
+    width: 90px;
+    height: 1px;
+    background-color: #ffffff;
+}
+
+.checkpoint .level-header {
+    position: relative;
+    width: 80%;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #E1C8EF, #A3E1E9);
+    border-radius: 25px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, .25);
+    margin-top: 30px;
+}
+
+.checkpoint .level-header p {
+    font-size: 48px;
+    font-weight: 800;
+    color: #081F5C;
+}
+
+.checkpoint .level-header .progress {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkpoint .level-header .progress img {
+    height: 50px;
+    margin-left: -25px;
+}
+
+.checkpoint .level-header .progress .progress-bar {
+    width: 50%;
+    height: 10px;
+    padding: 4px;
+    background-color: #ffffff;
+    border-radius: 100px;
+}
+
+.checkpoint .level-header .progress .progress-bar .inner-bar {
+    height: 100%;
+    background-color: #00A3FF;
+    border-radius: 100px;
+}
+
+@keyframes astronaut-level-floating {
+    from {
+        transform: translateY(0) translateX(0) rotate(5deg);
+    }
+
+    to {
+        transform: translateY(-30px) translateX(-5px) rotate(-5deg);
+    }
+}
+
+.checkpoint .astronaut-level {
+    height: 300px;
+    position: absolute;
+    right: -60px;
+    top: 250px;
+    animation: astronaut-level-floating 2s ease-in-out infinite alternate;
+}
+
+.checkpoint .planets-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 40px;
+}
+
+@keyframes planet-focus {
+    from {
+        rotate: 0;
+    }
+
+    to {
+        rotate: 360deg;
+    }
+}
+
+.checkpoint .planets-container .planet {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+    border-radius: 50%;
+}
+
+.checkpoint .planets-container .planet:not(.locked) {
+    cursor: pointer;
+}
+
+.checkpoint .planets-container .planet:hover:not(.locked) {
+    transform: scale(1.1);
+}
+
+.checkpoint .planets-container .planet:hover img:last-child {
+    animation-play-state: running;
+}
+
+.checkpoint .planets-container .planet img:first-child {
+    position: absolute;
+    height: 70px;
+    filter: grayscale(100%) contrast(2) drop-shadow(0 4px 4px rgba(0, 0, 0, .25));
+    z-index: 1;
+}
+
+.checkpoint .planets-container .passed img:first-child {
+    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, .25));
+}
+
+.checkpoint .planets-container .planet img:last-child {
+    height: 100%;
+    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, .25));
+    animation: planet-focus 10s linear infinite paused;
+}
+
+.checkpoint .planets-container .locked img:first-child {
+    filter: grayscale(100%) contrast(2) drop-shadow(0 4px 4px rgba(0, 0, 0, .25));
+}
+
+.checkpoint .planets-container .locked img:last-child {
+    filter: grayscale(100%) drop-shadow(4px 4px 4px rgba(0, 0, 0, .25));
+    animation: none;
 }

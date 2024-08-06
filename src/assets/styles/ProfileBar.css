@@ -1,5 +1,4 @@
 .profile-bar {
-    flex: 0.3;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -8,6 +7,11 @@
     border-left: 1px solid;
     border-image: linear-gradient(to top, #86E7D6, #538AD6) 1;
     font-family: "Arial Rounded MT Bold", sans-serif;
+    position: fixed;
+    right: 0;
+    height: 100%;
+    width: inherit;
+    overflow: hidden;
 }
 
 .profile-bar img:not(.profile-pic img, .next-button, .title img) {
@@ -160,6 +164,7 @@
     border-radius: 10px;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, .15);
     padding: 0 10px;
+    overflow: hidden;
 }
 
 .profile-bar .leaderboard .user-list .user .title {
@@ -172,6 +177,8 @@
 .profile-bar .leaderboard .user-list .user .title img {
     width: 30px;
     height: 30px;
+    background-color: #fff;
+    border-radius: 100px;
 }
 
 .profile-bar .leaderboard .user-list .user .score {

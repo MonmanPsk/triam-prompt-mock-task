@@ -5,9 +5,9 @@ import ProfileBar from "../components/layout/ProfileBar";
 export default function Home() {
     return (
         <>
-            <MenuBar />
+            <div className="left-layout"><MenuBar /></div>
             <HomeMenu />
-            <ProfileBar />
+            <div className="right-layout"><ProfileBar /></div>
         </>
     );
 }

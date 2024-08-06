@@ -5,11 +5,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow-x: hidden;
 }
 
 .home-menu .header {
-    width: 100%;
-    height: 80px;
+    margin: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,7 +27,7 @@
 
 .home-menu .menu {
     width: 90%;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .home-menu .menu .new-ai-menu {
@@ -44,7 +44,7 @@
     width: 100px;
 }
 
-.home-menu .menu .new-ai-menu .linear-fill {
+.home-menu .menu .linear-fill {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -59,6 +59,7 @@
     from {
         transform: translateY(0) rotate(0);
     }
+
     to {
         transform: translateY(-20px) rotate(5deg);
     }
@@ -67,7 +68,8 @@
 .home-menu .menu .new-ai-menu .astronaut-image {
     height: 270px;
     position: absolute;
-    margin: -40px 18%;
+    right: 15px;
+    top: -40px;
     animation: astronaut-floating 4s ease-in-out infinite alternate;
     z-index: 2;
 }
@@ -98,7 +100,7 @@
 }
 
 .home-menu .menu .new-ai-menu .get-started-button:hover {
-    transform: scale(1.02);
+    transform: scale(1.03);
 }
 
 .home-menu .menu .new-ai-menu .get-started-button:active {
@@ -114,4 +116,74 @@
 .home-menu .menu .new-ai-menu .get-started-button img {
     height: 40px;
     filter: invert(100%);
+}
+
+.home-menu .careers-menu {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.home-menu .careers-menu p {
+    width: fit-content;
+    font-family: "Baloo 2", sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.home-menu .careers-menu .careers {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 30px;
+    column-gap: 10%;
+}
+
+.home-menu .careers-menu .careers .career {
+    position: relative;
+    width: 380px;
+    height: 230px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #E1C8EF, #A3E1E9);
+    border-radius: 25px;
+    cursor: pointer;
+    transition: .25s;
+}
+
+.home-menu .careers-menu .careers .career:hover:not(.locked) {
+    transform: scale(1.03);
+}
+
+.home-menu .careers-menu .careers .career:active:not(.locked) {
+    transform: scale(0.99);
+}
+
+.home-menu .careers-menu .careers .locked {
+    background: linear-gradient(135deg, #bbbbbb, #dddddd);
+}
+
+.home-menu .careers-menu .careers .career .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    filter: drop-shadow(0 4px 15px rgba(0, 0, 0, .15));
+}
+
+.home-menu .careers-menu .careers .career .title img {
+    height: 50px;
+    filter: invert(100%);
+}
+
+.home-menu .careers-menu .careers .career .title p {
+    max-width: 250px;
+    font-family: "Baloo 2", sans-serif;
+    font-size: 36px;
+    font-weight: bold;
 }

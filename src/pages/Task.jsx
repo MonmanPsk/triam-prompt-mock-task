@@ -5,9 +5,9 @@ import ProfileBar from "../components/layout/ProfileBar";
 export default function Task() {
   return (
     <>
-      <MenuBar />
+      <div className="left-layout"><MenuBar /></div>
       <Checkpoint />
-      <ProfileBar />
+      <div className="right-layout"><ProfileBar /></div>
     </>
   );
 }

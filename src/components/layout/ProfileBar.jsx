@@ -1,6 +1,10 @@
 import '../../assets/styles/ProfileBar.css'
 
-import userImg from '../../assets/images/User Picture.png'
+import MonImg from '../../assets/images/User/Mon.png'
+import KuerImg from '../../assets/images/User/Kuer.png'
+import MapleImg from '../../assets/images/User/Maple.png'
+import GidImg from '../../assets/images/User/Gid.png'
+import PeemImg from '../../assets/images/User/Peem.png'
 
 export default function ProfileBar() {
     const date = new Date();
@@ -24,7 +28,7 @@ export default function ProfileBar() {
                         <image
                             clipPath="url(#hexagon-clip-path)"
                             width="100%"
-                            href={userImg}
+                            href={MonImg}
                         ></image>
                     </svg>
                 </div>
@@ -39,14 +43,14 @@ export default function ProfileBar() {
                 <p>Kantachad Phoodsongkram</p>
                 <p className='username'>@monmanpsk</p>
                 <div className='view-profile-button'>
-                    <img src="https://img.icons8.com/?size=100&id=3buQveFp0BoL&format=png&color=000000" alt="" />
+                    <img src="https://img.icons8.com/?size=512&id=3buQveFp0BoL&format=png&color=000000" alt="" />
                     <p>Profile</p>
                 </div>
             </div>
             <div className='daily-quest'>
                 <div className='header'>
                     <p>Daily Quest</p>
-                    <img className='next-button' src="https://img.icons8.com/?size=100&id=98971&format=png&color=000000" alt="" />
+                    <img className='next-button' src="https://img.icons8.com/?size=512&id=98971&format=png&color=000000" alt="" />
                 </div>
                 <div className='quest-list'>
                     <div className='quest'>
@@ -94,15 +98,15 @@ export default function ProfileBar() {
             </div>
             <div className='leaderboard'>
                 <div className='header'>
-                    <img src="https://img.icons8.com/?size=100&id=ShQuUEaU7uIN&format=png&color=000000" alt="" />
+                    <img src="https://img.icons8.com/?size=512&id=ShQuUEaU7uIN&format=png&color=000000" alt="" />
                     <p>Leaderboard</p>
-                    <img className='next-button' src="https://img.icons8.com/?size=100&id=98971&format=png&color=000000" alt="" />
+                    <img className='next-button' src="https://img.icons8.com/?size=512&id=98971&format=png&color=000000" alt="" />
                 </div>
                 <div className='user-list'>
                     <div className='user'>
                         <div className='title'>
                             <p>01</p>
-                            <img src="" alt="" />
+                            <img src={KuerImg} alt="" />
                             <p>@kueinwza007</p>
                         </div>
                         <div className='score'>
@@ -112,7 +116,7 @@ export default function ProfileBar() {
                     <div className='user'>
                         <div className='title'>
                             <p>02</p>
-                            <img src="" alt="" />
+                            <img src={MapleImg} alt="" />
                             <p>@maplecoolgirl</p>
                         </div>
                         <div className='score'>
@@ -121,12 +125,22 @@ export default function ProfileBar() {
                     </div>
                     <div className='user'>
                         <div className='title'>
-                            <p>01</p>
-                            <img src="" alt="" />
+                            <p>03</p>
+                            <img src={GidImg} alt="" />
                             <p>@englandenglishno1</p>
                         </div>
                         <div className='score'>
                             <p>1003</p>
+                        </div>
+                    </div>
+                    <div className='user'>
+                        <div className='title'>
+                            <p>04</p>
+                            <img src={PeemImg} alt="" />
+                            <p>@peemmmmeiei</p>
+                        </div>
+                        <div className='score'>
+                            <p>972</p>
                         </div>
                     </div>
                 </div>

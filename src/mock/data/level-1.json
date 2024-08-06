@@ -1,0 +1,12 @@
+[
+    {
+        "id": 1,
+        "choices": [
+            "The main target group is elderly people.",
+            "Creating advertising content that encourages purchase decisions.",
+            "I am marketing.",
+            "Focus on Facebook communication within one page."
+        ],
+        "answers": [2, 1, 0, 3]
+    }
+]
