@@ -1,3 +1,5 @@
+import { useState, useEffect } from 'react'
+
 import '../../assets/styles/ProfileBar.css'
 
 import MonImg from '../../assets/images/User/Mon.png'
@@ -7,7 +9,15 @@ import GidImg from '../../assets/images/User/Gid.png'
 import PeemImg from '../../assets/images/User/Peem.png'
 
 export default function ProfileBar() {
-    const date = new Date();
+    const [time, setTime] = useState(new Date());
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setTime(new Date());
+        }, 1000);
+
+        return () => clearInterval(interval)
+    }, []);
 
     return (
         <div className="profile-bar">
@@ -83,15 +93,15 @@ export default function ProfileBar() {
                 </div>
                 <div className='time'>
                     <div className='time-unit'>
-                        <p>{23 - date.getHours()}</p>
+                        <p>{23 - time.getHours()}</p>
                         <p>HOUR</p>
                     </div>
                     <div className='time-unit'>
-                        <p>{59 - date.getMinutes()}</p>
+                        <p>{59 - time.getMinutes()}</p>
                         <p>MIN</p>
                     </div>
                     <div className='time-unit'>
-                        <p>{59 - date.getSeconds()}</p>
+                        <p>{59 - time.getSeconds()}</p>
                         <p>SEC</p>
                     </div>
                 </div>
