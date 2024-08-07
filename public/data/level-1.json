@@ -2,11 +2,21 @@
     {
         "id": 1,
         "choices": [
-            "The main target group is elderly people.",
-            "Creating advertising content that encourages purchase decisions.",
-            "I am marketing.",
-            "Focus on Facebook communication within one page."
+            "The main target group is elderly people",
+            "Creating advertising content that encourages purchase decisions",
+            "I am marketing",
+            "Focus on Facebook communication within one page"
         ],
         "answers": [2, 1, 0, 3]
+    },
+    {
+        "id": 2,
+        "choices": [
+            "Marketing Analyst",
+            "Table",
+            "Analyze the performance of a recent email marketing campaign",
+            "Include key metrics such as open rate and conversion rate"
+        ],
+        "answers": [0, 2, 3, 1]
     }
 ]

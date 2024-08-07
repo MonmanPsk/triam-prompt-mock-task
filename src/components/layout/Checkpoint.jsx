@@ -31,11 +31,11 @@ export default function Checkpoint() {
                 <img className='astronaut-level' src={Level1} alt="" />
             </div>
             <div className='planets-container'>
-                <div className='planet passed' style={{marginLeft: '50px'}} onClick={() => navigate('/level-1')}>
+                <div className='planet passed' style={{marginLeft: '50px'}} onClick={() => navigate('/level-1', {state:{level:0}})}>
                     <img src="https://img.icons8.com/?size=512&id=8ggStxqyboK5&format=png&color=000000" alt="" />
                     <img src="https://img.icons8.com/?size=512&id=NTsYlUSE7CmD&format=png&color=000000" alt="" />
                 </div>
-                <div className='planet' style={{marginRight: '350px'}}>
+                <div className='planet' style={{marginRight: '350px'}} onClick={() => navigate('/level-1', {state:{level:1}})}>
                     <img src="https://img.icons8.com/?size=512&id=8ggStxqyboK5&format=png&color=000000" alt="" />
                     <img src="https://img.icons8.com/?size=512&id=NTsYlUSE7CmD&format=png&color=000000" alt="" />
                 </div>

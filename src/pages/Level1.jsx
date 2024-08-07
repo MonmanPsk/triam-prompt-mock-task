@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 import '../assets/styles/Level1.css'
 
@@ -15,6 +15,7 @@ import Star6 from '../assets/images/Star/6.png'
 
 export default function Level1() {
     const navigate = useNavigate();
+    const { state } = useLocation();
     const [data, setData] = useState([]);
     const [passed, setPassed] = useState([false, false, false, false])
     const [pair, setPair] = useState([-1, -1])
@@ -72,7 +73,7 @@ export default function Level1() {
     function checkAnswer() {
         if (pair[0] == -1 || pair[1] == -1) return;
 
-        if (data[0].answers[pair[0]] == pair[1]) {
+        if (data[state.level].answers[pair[0]] == pair[1]) {
             const newPassed = [...passed];
             newPassed[pair[0]] = true;
             setPassed(newPassed);
@@ -104,7 +105,7 @@ export default function Level1() {
 
     function selectedChoice(side, answer) {
         if (side == 0 && passed[answer] == true) return;
-        if (side == 1 && passed[data[0].answers.indexOf(answer)] == true) return;
+        if (side == 1 && passed[data[state.level].answers.indexOf(answer)] == true) return;
 
         if (side == 0 && pair[0] != -1) return;
         if (side == 1 && pair[1] != -1) return;
@@ -173,19 +174,19 @@ export default function Level1() {
                 </div>
                 <div className='right-choice'>
                     <div className='choice shadow' onClick={() => selectedChoice(1, 0)}>
-                        <p>{data[0].choices[0]}</p>
+                        <p>{data[state.level].choices[0]}</p>
                         <img src="https://img.icons8.com/?size=512&id=uNzoeGXjLfRM&format=png&color=000000" alt="" />
                     </div>
                     <div className='choice shadow' onClick={() => selectedChoice(1, 1)}>
-                        <p>{data[0].choices[1]}</p>
+                        <p>{data[state.level].choices[1]}</p>
                         <img src="https://img.icons8.com/?size=512&id=uNzoeGXjLfRM&format=png&color=000000" alt="" />
                     </div>
                     <div className='choice shadow' onClick={() => selectedChoice(1, 2)}>
-                        <p>{data[0].choices[2]}</p>
+                        <p>{data[state.level].choices[2]}</p>
                         <img src="https://img.icons8.com/?size=512&id=uNzoeGXjLfRM&format=png&color=000000" alt="" />
                     </div>
                     <div className='choice shadow' onClick={() => selectedChoice(1, 3)}>
-                        <p>{data[0].choices[3]}</p>
+                        <p>{data[state.level].choices[3]}</p>
                         <img src="https://img.icons8.com/?size=512&id=uNzoeGXjLfRM&format=png&color=000000" alt="" />
                     </div>
                 </div>
