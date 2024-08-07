@@ -68,6 +68,21 @@ export default function Practice() {
             choice.getElementsByClassName("num-box")[0].style.color = "#ffffff";
             document.getElementsByClassName("shadow")[choiceNum - 1].style.setProperty('--shadowBeforeBackground', '#009657');
             document.getElementsByClassName("result")[0].style.display = "flex";
+        } else {
+            document.getElementsByClassName("incorrect")[0].style.display = "flex";
+            const choice = document.getElementsByClassName("choice")[choiceNum - 1];
+            choice.style.background = "linear-gradient(to bottom, #f01e2c, #ee6b6e)";
+            choice.getElementsByClassName("text-container")[0].style.color = "#ffffff";
+            choice.getElementsByClassName("num-box")[0].style.color = "#ffffff";
+            document.getElementsByClassName("shadow")[choiceNum - 1].style.setProperty('--shadowBeforeBackground', '#c30010');
+            setTimeout(() => {
+                document.getElementsByClassName("incorrect")[0].style.display = "none";
+                const choice = document.getElementsByClassName("choice")[choiceNum - 1];
+                choice.style.background = "";
+                choice.getElementsByClassName("text-container")[0].style.color = "#081F5C";
+                choice.getElementsByClassName("num-box")[0].style.color = "#777777";
+                document.getElementsByClassName("shadow")[choiceNum - 1].style.setProperty('--shadowBeforeBackground', 'linear-gradient(to bottom, #AD6EFE, #0CD7BD)');
+            }, 400)
         }
     }
 
@@ -78,6 +93,7 @@ export default function Practice() {
     return (
         <div className="practice">
             <BackButton to={'/'} />
+            <div className='incorrect'></div>
             <div className='result'>
                 <div className='popup'>
                     <img src={starImages[Math.floor(Math.random() * starImages.length)]} alt="" />

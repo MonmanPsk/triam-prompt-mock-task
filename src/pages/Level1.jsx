@@ -83,14 +83,21 @@ export default function Level1() {
             document.getElementsByClassName('right-choice')[0].getElementsByClassName("choice")[pair[1]].style.background = "linear-gradient(225deg, #71E200, #00BE6E)";
             document.getElementsByClassName('right-choice')[0].getElementsByClassName("shadow")[pair[1]].style.setProperty('--shadowBeforeBackground', '#009657');
             document.getElementsByClassName('right-choice')[0].getElementsByClassName("choice")[pair[1]].getElementsByTagName('img')[0].style.display = 'flex'
-
         } else {
-            document.getElementsByClassName('left-choice')[0].getElementsByClassName("choice")[pair[0]].style.background = "";
-            document.getElementsByClassName('left-choice')[0].getElementsByClassName("shadow")[pair[0]].style.setProperty('--shadowBeforeBackground', 'linear-gradient(225deg, #B721FF, #21D4FD)');
-            document.getElementsByClassName('left-choice')[0].getElementsByClassName("choice")[pair[0]].getElementsByTagName('p')[0].style.color = "#081F5C";
-            document.getElementsByClassName('right-choice')[0].getElementsByClassName("choice")[pair[1]].style.background = "";
-            document.getElementsByClassName('right-choice')[0].getElementsByClassName("shadow")[pair[1]].style.setProperty('--shadowBeforeBackground', 'linear-gradient(225deg, #B721FF, #21D4FD)');
-            document.getElementsByClassName('right-choice')[0].getElementsByClassName("choice")[pair[1]].getElementsByTagName('p')[0].style.color = "#081F5C";
+            document.getElementsByClassName("incorrect")[0].style.display = "flex";
+            document.getElementsByClassName('left-choice')[0].getElementsByClassName("choice")[pair[0]].style.background = "linear-gradient(225deg, #f01e2c, #ee6b6e)";
+            document.getElementsByClassName('left-choice')[0].getElementsByClassName("shadow")[pair[0]].style.setProperty('--shadowBeforeBackground', '#c30010');
+            document.getElementsByClassName('right-choice')[0].getElementsByClassName("choice")[pair[1]].style.background = "linear-gradient(225deg, #f01e2c, #ee6b6e)";
+            document.getElementsByClassName('right-choice')[0].getElementsByClassName("shadow")[pair[1]].style.setProperty('--shadowBeforeBackground', '#c30010');
+            setTimeout(() => {
+                document.getElementsByClassName("incorrect")[0].style.display = "none";
+                document.getElementsByClassName('left-choice')[0].getElementsByClassName("choice")[pair[0]].style.background = "";
+                document.getElementsByClassName('left-choice')[0].getElementsByClassName("shadow")[pair[0]].style.setProperty('--shadowBeforeBackground', 'linear-gradient(225deg, #B721FF, #21D4FD)');
+                document.getElementsByClassName('left-choice')[0].getElementsByClassName("choice")[pair[0]].getElementsByTagName('p')[0].style.color = "#081F5C";
+                document.getElementsByClassName('right-choice')[0].getElementsByClassName("choice")[pair[1]].style.background = "";
+                document.getElementsByClassName('right-choice')[0].getElementsByClassName("shadow")[pair[1]].style.setProperty('--shadowBeforeBackground', 'linear-gradient(225deg, #B721FF, #21D4FD)');
+                document.getElementsByClassName('right-choice')[0].getElementsByClassName("choice")[pair[1]].getElementsByTagName('p')[0].style.color = "#081F5C";
+            }, 400)
         }
         setPair([-1, -1]);
     }
@@ -124,6 +131,7 @@ export default function Level1() {
     return (
         <div className="level-1">
             <BackButton to={'/task'} />
+            <div className='incorrect'></div>
             <div className='result'>
                 <div className='popup'>
                     <img src={starImages[Math.floor(Math.random() * starImages.length)]} alt="" />
