@@ -124,6 +124,7 @@
 }
 
 .level-1 .title .question {
+    min-width: 250px;
     width: 480px;
     height: 80px;
     display: flex;

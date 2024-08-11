@@ -142,6 +142,7 @@
 }
 
 .practice .title .question {
+    min-width: 250px;
     width: 480px;
     height: 80px;
     display: flex;
@@ -165,7 +166,9 @@
     justify-content: center;
     align-items: center;
     gap: 20px;
+    margin: 20px;
     margin-top: 135px;
+    padding-bottom: 50px;
     flex-wrap: wrap;
 }
 
