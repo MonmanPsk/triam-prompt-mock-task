@@ -136,8 +136,10 @@
 
 .profile-bar .leaderboard {
     width: 90%;
+    height: 26%;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .profile-bar .leaderboard .header {
@@ -153,10 +155,23 @@
     flex-direction: column;
     gap: 10px;
     font-size: 14px;
+    overflow: auto;
+    border-radius: 5px;
+}
+
+.profile-bar .leaderboard::after {
+    content: "";
+    width: 100%;
+    height: 15%;
+    background: linear-gradient(to bottom, rgba(8, 31, 92, 0), rgba(8, 31, 92, .7));
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    pointer-events: none;
 }
 
 .profile-bar .leaderboard .user-list .user {
-    height: 50px;
+    min-height: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;

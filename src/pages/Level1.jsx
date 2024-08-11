@@ -142,6 +142,7 @@ export default function Level1() {
                     </div>
                 </div>
             </div>
+            <div className='background'></div>
             <div className='header'>
                 <div className='header-line'></div>
                 <p>LEVEL 1</p>

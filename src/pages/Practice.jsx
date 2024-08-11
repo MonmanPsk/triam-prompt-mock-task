@@ -103,6 +103,7 @@ export default function Practice() {
                     </div>
                 </div>
             </div>
+            <div className='background'></div>
             <div className='header'>
                 <div className='header-line'></div>
                 <p>PRACTICE</p>

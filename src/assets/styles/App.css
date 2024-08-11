@@ -20,3 +20,12 @@
     position: relative;
     min-width: 200px;
 }
+
+@media only screen and (max-width: 1024px) {
+    .left-layout {
+        display: none;
+    }
+    .right-layout {
+        display: none;
+    }
+}
